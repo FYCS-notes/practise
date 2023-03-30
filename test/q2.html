@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+      display: flex;
+    }
+
+    .price {
+      margin: auto;
+      background-color: red;
+      padding: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <div class="price" data-catagery="romance">300</div>
+    <div class="price" data-catagery="action">7800</div>
+    <div class="price" data-catagery="horroe">600</div>
+    <div class="price" data-catagery="adventrues">100</div>
+    <div class="price" data-catagery="comedy">500</div>
+  </main>
+  <select name="cars" id="cars">
+    <option value="romance">romance</option>
+    <option value="none">none</option>
+    <option value="action">action</option>
+    <option value="horroe">horroe</option>
+    <option value="adventrues">Auadventruesdi</option>
+    <option value="comedy">comedy</option>
+  </select>
+  <script>
+    let selectTag = document.querySelector("#cars")
+    let divTag = document.querySelectorAll("div")
+    selectTag.addEventListener("change", function (e) {
+      for (i = 0; i < divTag.length; i++) {
+        let categry = divTag[i].getAttribute("data-catagery")
+        if (categry != e.currentTarget.value && e.currentTarget.value !== "none") divTag[i].style.display = "none"
+        else divTag[i].style.display = "block"
+      }
+    })
+        // ============================================================
+    //     let divTag=document.querySelectorAll("div")
+    // document.querySelector("#cars").addEventListener("change",function(a){
+    //       for(i=0;i<divTag.length;i++)divTag[i].style.display="none"
+    //     let div=document.querySelector('div[data-catagery="'+[a.currentTarget.value]+'"]')
+    //    div.style.display="block"
+    //   })
+
+
+  </script>
+</body>
+
+</html>

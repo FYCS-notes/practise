@@ -1,0 +1,17 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    height: 1050vh;
+}
+.c1{
+    height: 100px;
+    background-color: red;
+    width: 100px;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50px,-50px)
+}

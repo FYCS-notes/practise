@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+           background-color: red;
+           margin: 30px 30px;
+           border: none;
+        }
+    </style>
+</head>
+<body>
+    <button>double</button>
+
+    <script>
+        let body=document.querySelector('body')
+    document.querySelector('button').addEventListener('click',creatEl)
+       function creatEl(e){
+        let button1=document.createElement('button')
+        let button2=document.createElement('button')
+        button1.innerHTML='double'
+        button2.innerText='double'
+        button1.addEventListener('click',creatEl)
+        button2.addEventListener('click',creatEl)
+        body.append(button1)
+        body.append(button2)
+        e.currentTarget.remove()
+       }
+    
+    </script>
+</body>
+</html>
